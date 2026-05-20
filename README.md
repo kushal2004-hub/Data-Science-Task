@@ -6,7 +6,7 @@
 This repository contains my solutions for the Globussoft Data Science technical assessment.
 ---
 
-## 📦 Repository Structure
+##  Repository Structure
 
 ```text
 ├── Amazon Laptop Web Scraping/
@@ -21,7 +21,7 @@ This repository contains my solutions for the Globussoft Data Science technical 
 
 ---
 
-## 🛒 Task 1: Amazon.in Web Scraper
+##  Task 1: Amazon.in Web Scraper
 
 **Directory:** `Amazon Laptop Web Scraping`
 
@@ -42,7 +42,7 @@ python main.py
 
 ---
 
-## 👤 Task 2: Face Authentication API
+##  Task 2: Face Authentication API
 
 **Directory:** `Face Authentication`
 
@@ -68,7 +68,7 @@ py -3.11 -m uvicorn main:app --reload
 
 **3. Test the API:**
 Open your browser and navigate to the interactive Swagger UI dashboard:  
-👉 **`http://127.0.0.1:8000/docs`**
+ **`http://127.0.0.1:8000/docs`**
 
 Expand the `POST /verify` endpoint, click "Try it out", upload two images, and click "Execute".
 
@@ -112,4 +112,3 @@ Expand the `POST /verify` endpoint, click "Try it out", upload two images, and c
 | **ML Backend** | `tf-keras` / `tensorflow`| Deep learning mathematical backend. |
 
 ---
-*Note: A `.gitattributes` file has been implemented to exclude the static `amazon_page.html` data dump from GitHub's Linguist statistics, ensuring the repository accurately reflects the core Python architecture.*
