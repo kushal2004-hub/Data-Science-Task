@@ -16,29 +16,23 @@ def parse_amazon_data():
     print("File loaded. Parsing the data...")
     soup = BeautifulSoup(html_content, 'html.parser')
     
-    # UPGRADE 1: Try multiple ways to find the product containers
     product_containers = soup.find_all('div', {'data-component-type': 's-search-result'})
     
-    # If the first method finds 0, try a broader search
     if len(product_containers) == 0:
         product_containers = soup.find_all('div', class_='s-result-item')
     
     scraped_laptops = []
     
     for product in product_containers:
-        # UPGRADE 2: Titles are almost always inside <h2> tags on Amazon
         title_tag = product.find('h2')
         title = title_tag.text.strip() if title_tag else "Title not found"
             
-        # UPGRADE 3: Try finding the price using the standard class
         price_box = product.find('span', {'class': 'a-price-whole'})
         price = price_box.text.strip() if price_box else "Price not found"
             
-        # Extract rating
         rating_box = product.find('span', {'class': 'a-icon-alt'})
         rating = rating_box.text.strip() if rating_box else "Rating not found"
             
-        # Clean up the data: only save if it has a real title and price
         if title != "Title not found" and len(title) > 5:
             scraped_laptops.append({
                 "Laptop Name": title,
