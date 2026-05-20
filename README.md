@@ -3,7 +3,7 @@
 **Applicant:** Kushal Gowda H M  
 **Date:** 20 May 2026
 
-This repository contains my solutions for the Globussoft Data Science technical assessment.
+ This repository contains my solutions for the Globussoft Data Science technical assessment.
 ---
 
 ##  Repository Structure
